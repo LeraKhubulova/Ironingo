@@ -10,17 +10,17 @@ namespace Ironingo
     public class DictionaryManager  //управляет списком слов и их сохранением/загрузкой
     {
         private List<Word> words = new List<Word>();
-        private readonly string filePath;//Приватное поле хранящее путь к файлу где сохраняется и откуда загружается словарь
+        private readonly string filePath;//приватное поле хранящее путь к файлу где сохраняется и откуда загружается словарь
 
         public DictionaryManager(string filePath)
         {
-            this.filePath = filePath;//онструктор класса принимает путь к файлу и сохраняет его в поле 
+            this.filePath = filePath;//конструктор класса принимает путь к файлу и сохраняет его в поле 
         }
 
-        // Получить список слов только для чтения
+        // получить список слов только для чтения
         public IReadOnlyList<Word> Words => words.AsReadOnly();//не позволяет изменять список снаружи
 
-        // Добавить слово, возвращает false если слово уже есть
+        // добавить слово, возвращает фолз если слово уже есть
         public bool AddWord(Word word)
         {
             if (words.Any(w => w.Ossetian.Equals(word.Ossetian, StringComparison.OrdinalIgnoreCase)))
@@ -30,13 +30,13 @@ namespace Ironingo
             return true;
         }
 
-        // Удалить слово
+        // удалить слово
         public void RemoveWord(Word word)
         {
             words.Remove(word);
         }
 
-        // Загрузить слова из файла
+        // загрузить слова из файла
         public void Load()
         {
             words.Clear();
@@ -49,13 +49,13 @@ namespace Ironingo
                 var parts = line.Split(new string[] { " - " }, StringSplitOptions.None);
                 if (parts.Length == 2)
                 {
-                    //Если строка корректна  создаёт новый объект Word и добавляет его в список
+                    //tсли строка корректна  создаёт новый объект Word и добавляет его в список
                     words.Add(new Word { Ossetian = parts[0], Translation = parts[1] });
                 }
             }
         }
 
-        // Сохранить слова в файл
+        // cохранить слова в файл
         public void Save()
         {
             using (StreamWriter writer = new StreamWriter(filePath))

@@ -39,15 +39,6 @@ namespace Ironingo
             this.Close();
         }
 
-        private void labelTranslatePrint_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTranslation_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void FormWord_Load(object sender, EventArgs e)
         {

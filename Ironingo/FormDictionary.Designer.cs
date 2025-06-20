@@ -132,7 +132,9 @@
             this.Controls.Add(this.btnAddWord);
             this.Controls.Add(this.listBoxWords);
             this.Controls.Add(this.pictureBoxIroningo);
+            this.MaximizeBox = false;
             this.Name = "FormDictionary";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormIroningo";
             this.Load += new System.EventHandler(this.FormDictionary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIroningo)).EndInit();

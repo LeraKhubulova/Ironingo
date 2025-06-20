@@ -99,6 +99,7 @@
             this.Controls.Add(this.lblOssetianWord);
             this.Controls.Add(this.pictureBoxProspekt);
             this.Name = "FormTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTest";
             this.Load += new System.EventHandler(this.FormTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProspekt)).EndInit();

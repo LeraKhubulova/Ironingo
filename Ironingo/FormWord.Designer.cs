@@ -56,7 +56,6 @@
             this.txtTranslation.Name = "txtTranslation";
             this.txtTranslation.Size = new System.Drawing.Size(352, 67);
             this.txtTranslation.TabIndex = 1;
-            this.txtTranslation.TextChanged += new System.EventHandler(this.txtTranslation_TextChanged);
             // 
             // btnOk
             // 
@@ -86,24 +85,23 @@
             // 
             this.labelWordPrint.AutoSize = true;
             this.labelWordPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelWordPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWordPrint.Location = new System.Drawing.Point(107, 157);
+            this.labelWordPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelWordPrint.Location = new System.Drawing.Point(78, 175);
             this.labelWordPrint.Name = "labelWordPrint";
-            this.labelWordPrint.Size = new System.Drawing.Size(292, 79);
+            this.labelWordPrint.Size = new System.Drawing.Size(719, 61);
             this.labelWordPrint.TabIndex = 4;
-            this.labelWordPrint.Text = "СЛОВО";
+            this.labelWordPrint.Text = "СЛОВО НА ОСЕТИНСКОМ";
             // 
             // labelTranslatePrint
             // 
             this.labelTranslatePrint.AutoSize = true;
             this.labelTranslatePrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelTranslatePrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTranslatePrint.Location = new System.Drawing.Point(943, 157);
+            this.labelTranslatePrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTranslatePrint.Location = new System.Drawing.Point(961, 175);
             this.labelTranslatePrint.Name = "labelTranslatePrint";
-            this.labelTranslatePrint.Size = new System.Drawing.Size(382, 79);
+            this.labelTranslatePrint.Size = new System.Drawing.Size(327, 67);
             this.labelTranslatePrint.TabIndex = 5;
             this.labelTranslatePrint.Text = "ПЕРЕВОД";
-            this.labelTranslatePrint.Click += new System.EventHandler(this.labelTranslatePrint_Click);
             // 
             // pictureBoxPirog
             // 
@@ -129,6 +127,7 @@
             this.Controls.Add(this.txtOssetian);
             this.Controls.Add(this.pictureBoxPirog);
             this.Name = "FormWord";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormWord";
             this.Load += new System.EventHandler(this.FormWord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPirog)).EndInit();
